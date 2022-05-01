@@ -1,4 +1,7 @@
 package main;
+
+import java.util.Scanner;
+
 // Your First Program
 
 public class HelloWorld {
@@ -20,8 +23,14 @@ public class HelloWorld {
 	}
 	
     public static void main(String[] args) {
-        System.out.println("Hello, World!"); 
-        System.out.println(numberPlusOne(4));
+    	 Scanner myObj = new Scanner(System.in);
+    	 System.out.println("Type an integer: ");
+    	 boolean isTypedNumber = myObj.hasNextInt();
+    	 if (isTypedNumber) {
+    		 System.out.println("Number is: " + myObj.nextInt());
+    	 }
+    	 
+    	 
     }
 }
 
